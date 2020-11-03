@@ -18,6 +18,10 @@ import { ContactComponent } from './contact/contact.component';
 import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
+import { DishTableComponent } from './dish-table/dish-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 const routes: Routes = [
 {path: '', component: HomeComponent},
@@ -34,7 +38,8 @@ const routes: Routes = [
     CarteComponent,
     ReserveComponent,
     ContactComponent,
-    MyDashboardComponent
+    MyDashboardComponent,
+    DishTableComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,10 @@ const routes: Routes = [
     MatCardModule,
     RouterModule.forRoot(routes),
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
