@@ -16,20 +16,36 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content" *ngIf="card.id==='alc'">
-          <div>Contenu de monluc</div>
-        </mat-card-content>
-        <mat-card-content class="dashboard-card-content" *ngIf="card.id==='men'">
-          <div>Content pas content</div>
+          <div>
+              <p *ngFor = "let alacar of alacarte">
+                <span> {{alacar.title}}</span> :
+                <span> {{alacar.description}}</span> :
+                <span>{{alacar.price | currency : 'EUR'}}</span>
+              </p>
+        </div>
         </mat-card-content>
         <mat-card-content class="dashboard-card-content" *ngIf="card.id==='slp'">
-          <div>22 vladimir</div>
+          <div>
+            <p *ngFor = "let surlep of surlepouce">
+              <span>{{surlep.title}}</span>:
+              <span>{{surlep.description}}</span> :
+              <span>{{surlep.price | currency : 'EUR'}}</span>
+            </p>
+          </div>
         </mat-card-content>
         <mat-card-content class="dashboard-card-content" *ngIf="card.id==='des'" >
-          <div>Dessert moi</div>
+          <div>
+                <p *ngFor = "let des of dessert">
+                  <span>{{des.title}}</span>:
+                  <span>{{des.description}}</span> :
+                  <span>{{des.price | currency : 'EUR'}}</span>
+                </p>
+
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
 
-<div *ngFor ="let alac of alacarte">{{alac.title}}</div>
+<div *ngFor ="let mens of menu">{{mens.title}}</div>

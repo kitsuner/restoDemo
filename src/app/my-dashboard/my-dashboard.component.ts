@@ -16,7 +16,6 @@ export class MyDashboardComponent implements OnInit {
       if (matches) {
         return [
           { title: 'A la carte', cols: 1, rows: 1 },
-          { title: 'Menu', cols: 1, rows: 1 },
           { title: 'Sur le pouce', cols: 1, rows: 1 },
           { title: 'Dessert', cols: 1, rows: 1 }
         ];
@@ -24,8 +23,7 @@ export class MyDashboardComponent implements OnInit {
 
       return [
         { title: 'A la carte', cols: 2, rows: 1, id: 'alc'},
-        { title: 'Menu', cols: 2, rows: 1, id: 'men' },
-        { title: 'Sur le pouce', cols: 2, rows: 2, id: 'slp' },
+        { title: 'Sur le pouce', cols: 2, rows: 1, id: 'slp' },
         { title: 'Dessert', cols: 2, rows: 1, id : 'des' }
       ];
     })
@@ -40,7 +38,6 @@ export class MyDashboardComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver, private qls: QuickLunchService) {}
   // tslint:disable-next-line: typedef
   ngOnInit(){
-    this.menu = this.qls.getmenu();
     this.alacarte = this.qls.getAlacarte();
     this.surlepouce = this.qls.getsurlepouce();
     this.dessert = this.qls.getDessert();

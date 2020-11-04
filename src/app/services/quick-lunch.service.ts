@@ -14,11 +14,6 @@ export class QuickLunchService {
   {id: 3 , title: 'omelette du moment', description: 'oeuf sans oeuf vegetarien', price: 90.98}
 ];
 
-menu: Food[] = [
-  {id: 1 , title: 'grand travers', description: 'le meilleur menu du moment', price: 76.40},
-  {id: 2 , title: 'petit travers', description: 'pour les petites faim', price: 39.99 },
-  {id: 3 , title: 'avoir faim', description: 'ca tombe bien', price: 190.98}
-];
 
 surlepouce: Food[] = [
   {id: 1 , title: 'grand travers', description: 'le meilleur menu du moment', price: 76.40},
@@ -37,11 +32,6 @@ dessert: Food[] = [
 
   getAlacarte(): Food[]{
     return this.alacarte;
-  }
-
-  // tslint:disable-next-line: typedef
-  getmenu(): Food[] {
-    return this.menu;
   }
 
 
