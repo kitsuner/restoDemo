@@ -1,3 +1,4 @@
+import { QuickLunchService } from './../services/quick-lunch.service';
 import { Food } from './../models/food.interface';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
@@ -22,14 +23,26 @@ export class MyDashboardComponent implements OnInit {
       }
 
       return [
-        { title: 'A la carte', cols: 2, rows: 1 },
-        { title: 'Menu', cols: 2, rows: 1 },
-        { title: 'Sur le pouce', cols: 2, rows: 2 },
-        { title: 'Dessert', cols: 2, rows: 1 }
+        { title: 'A la carte', cols: 2, rows: 1, id: 'alc'},
+        { title: 'Menu', cols: 2, rows: 1, id: 'men' },
+        { title: 'Sur le pouce', cols: 2, rows: 2, id: 'slp' },
+        { title: 'Dessert', cols: 2, rows: 1, id : 'des' }
       ];
     })
   );
+
+  alacarte: Food[];
+  menu: Food[];
+  surlepouce: Food[];
+  dessert: Food[];
   // tslint:disable-next-line: typedef
-  ngOnInit() {}
-  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  constructor(private breakpointObserver: BreakpointObserver, private qls: QuickLunchService) {}
+  // tslint:disable-next-line: typedef
+  ngOnInit(){
+    this.menu = this.qls.getmenu();
+    this.alacarte = this.qls.getAlacarte();
+    this.surlepouce = this.qls.getsurlepouce();
+    this.dessert = this.qls.getDessert();
+  }
 }
