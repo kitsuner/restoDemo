@@ -23,6 +23,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
+import {QuickLunchService} from './services/quick-lunch.service';
+
+import { from } from 'rxjs';
+
 const routes: Routes = [
 {path: '', component: HomeComponent},
 {path: 'carte', component : CarteComponent},

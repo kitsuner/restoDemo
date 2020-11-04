@@ -8,30 +8,31 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface DishTableItem {
   name: string;
   id: number;
+  price?: number;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: DishTableItem[] = [
-  {id: 1, name: 'purée aux cépes'},
-  {id: 2, name: 'délice de caviar},
-  {id: 3, name: 'dim sum'},
-  {id: 4, name: 'ravioli aux tomates confites'},
-  {id: 5, name: 'baba à la chartreuse'},
-  {id: 6, name: 'musli du gourmet'},
-  {id: 7, name: 'tomates au coulis frais'},
-  {id: 8, name: 'tartiflette du chef'},
-  {id: 9, name: 'mignardise de la reine'},
-  {id: 10, name: 'bouché à la reine'},
-  {id: 11, name: 'quiche au secret'},
-  {id: 12, name: 'canard laqué'},
-  {id: 13, name: 'huitre dorée au four'},
-  {id: 14, name: 'macaron qui est bon'},
-  {id: 15, name: 'dorade'},
-  {id: 16, name: 'marmite au boeuf'},
-  {id: 17, name: 'miam miam'},
-  {id: 18, name: 'blanc manger'},
-  {id: 19, name: 'pizza du chef'},
-  {id: 20, name: 'assiette surprise'},
+  {id: 1, name: 'purée aux cépes', price: 10},
+  {id: 2, name: 'délice de caviar', price: 15},
+  {id: 3, name: 'dim sum', price: 18},
+  {id: 4, name: 'ravioli aux tomates confites', price: 22},
+  {id: 5, name: 'baba à la chartreuse', price: 6},
+  {id: 6, name: 'musli du gourmet', price: 5},
+  {id: 7, name: 'tomates au coulis frais', price: 10},
+  {id: 8, name: 'tartiflette du chef', price: 19},
+  {id: 9, name: 'mignardise de la reine', price: 5},
+  {id: 10, name: 'bouché à la reine', price: 12.80},
+  {id: 11, name: 'quiche au secret', price: 13},
+  {id: 12, name: 'canard laqué', price: 15},
+  {id: 13, name: 'huitre dorée au four', price: 22},
+  {id: 14, name: 'macaron qui est bon', price: 8},
+  {id: 15, name: 'dorade', price: 19},
+  {id: 16, name: 'marmite au boeuf', price: 22},
+  {id: 17, name: 'miam miam', price : 21},
+  {id: 18, name: 'blanc manger', price : 12},
+  {id: 19, name: 'pizza du chef', price : 17},
+  {id: 20, name: 'assiette surprise', price : 20},
 ];
 
 /**
